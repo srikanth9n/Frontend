@@ -8,7 +8,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-image: url("../assests/medical-563427_1280-safeimagekit.jpeg");
+    background-image: url("./medical-563427_1280-safeimagekit.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;

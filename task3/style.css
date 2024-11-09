@@ -1,17 +1,67 @@
 /* General styling */
 body {
     font-family: "Poppins", sans-serif;
-    background-image: url("../assests/Sans-titre-35\ \(1\).png \(1\).png");
+    background-image: url("./Sans-titre-35\ \(1\).png");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
     margin-top: 60px;
+    padding-top: 80px; /* Adjust space for navbar */
 }
 
-* {
-    box-sizing: border-box;
+/* Navbar styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--backgroundColor);
+    z-index: 100;
+    padding: 1rem 3rem;
 }
 
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h3 {
+    color: var(--darkTwo);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.links a {
+    color: var(--lightTwo);
+    margin-left: 4.5rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: var(--hoverColor);
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.9rem;
+    color: #fff !important;
+    background-color: var(--mainColor);
+    border-radius: 16px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+/* Card for the signup form */
 .card {
     display: flex;
     justify-content: center;
@@ -21,43 +71,25 @@ body {
     margin: 0 auto;
     min-height: 100vh;
     animation: slideIn 0.6s ease-out;
+    padding-top: 50px; /* Add padding for proper spacing */
+}
+.links ul li a{
+    text-decoration: none;
 }
 
-.imgs {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-
-.imgs img {
-    width: 600px;
-    border-radius: 25%;
-}
-
-/* Form styling */
-form {
+.main {
+    width: 100%;
     max-width: 600px;
-    margin: 30px auto;
-    padding: 30px;
     background-color: white;
+    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.form-group {
-    display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.form-group label {
-    width: 150px;
-    margin-right: 15px;
-    text-align: right;
-}
-
+/* Form inputs */
 input[type=text], input[type=password], input[type=date], textarea {
     width: 100%;
+    
     padding: 15px;
     margin: 5px 0;
     display: inline-block;
@@ -75,46 +107,9 @@ input[type=text]:focus, input[type=password]:focus, input[type=date]:focus {
     outline: none;
 }
 
-.gen {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    margin-left: 50px;
-}
-
-#be {
-    padding: 2px;
-}
-
-hr {
-    border: 1px solid #f1f1f1;
-    margin-bottom: 25px;
-}
-
-/* Button styling with pulse and hover effect */
-button.signupbtn, button.cancelbtn {
-    transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-button.signupbtn:hover, button.cancelbtn:hover {
-    transform: scale(1.05);
-    background-color: #028a5e;
-}
-
-@keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.05);
-    }
-}
-
+/* Button styling */
 button.signupbtn {
     animation: pulse 2s infinite;
-}
-
-button {
     background-color: #04AA6D;
     color: white;
     padding: 14px 20px;
@@ -127,40 +122,17 @@ button {
     font-weight: bold;
 }
 
-button:hover {
+button.signupbtn:hover {
     opacity: 1;
 }
 
-/* Cancel and Sign Up button styling */
-.clearfix .cancelbtn, .clearfix .signupbtn {
-    width: 48%;
-    padding: 14px 20px;
-    border-radius: 8px;
-    font-weight: bold;
-    display: inline-block;
-    text-align: center;
-}
-
-/* Flex container for buttons */
-.clearfix {
-    display: flex;
-    justify-content: space-between;
-    gap: 4%;
-    align-items: center;
-}
-
-/* Centered container */
-.container {
-    padding: 16px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
 /* Responsive adjustments */
-@media screen and (max-width: 300px) {
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
     .clearfix .cancelbtn, .clearfix .signupbtn {
         width: 100%;
-        margin: 5px 0;
     }
 }
