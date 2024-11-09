@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+    <div class="login-main">
+
+<form action="" class="form-container">
+  <div class="container">
+    <h1>Login</h1>
+    <p>Please enter your credentials to log in.</p>
+    <hr>
+
+    <div class="form-group">
+        <label for="username"><b>Username</b></label>
+        <input type="text" placeholder="Enter Username" name="username" id="username" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email"><b>Email</b></label>
+        <input type="email" placeholder="Enter Email" name="email" id="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="psw"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="psw" required>
+    </div>
+
+    <div class="form-group">
+      <label>
+        <input type="checkbox" name="remember" style="margin-bottom:15px"> Remember me
+      </label>
+      <span class="forgot-password"><a href="#">Forgot password?</a></span>
+    </div>
+
+    <div class="clearfix">
+      <button type="button" class="cancel" ><span> <a href="./signup.html">New User? Sign Up</a></span></button>
+      <button type="submit" class="login"><span><a href="">Login</a></span></button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>

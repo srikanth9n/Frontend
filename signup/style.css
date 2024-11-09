@@ -1,0 +1,138 @@
+/* General styling */
+body {
+    font-family: "Poppins", sans-serif;
+    background-image: url("./Sans-titre-35\ \(1\).png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin-top: 60px;
+    padding-top: 80px; /* Adjust space for navbar */
+}
+
+/* Navbar styling */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--backgroundColor);
+    z-index: 100;
+    padding: 1rem 3rem;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo h3 {
+    color: var(--darkTwo);
+    font-size: 1.55rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.links a {
+    color: var(--lightTwo);
+    margin-left: 4.5rem;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.links a:hover {
+    color: var(--hoverColor);
+    transform: scale(1.05);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.9rem;
+    color: #fff !important;
+    background-color: var(--mainColor);
+    border-radius: 16px;
+    text-transform: capitalize;
+    transition: 0.3s;
+}
+
+/* Card for the signup form */
+.card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    gap: 30px;
+    margin: 0 auto;
+    min-height: 100vh;
+    animation: slideIn 0.6s ease-out;
+    padding-top: 50px; /* Add padding for proper spacing */
+}
+.links ul li a{
+    text-decoration: none;
+}
+
+.main {
+    width: 100%;
+    max-width: 600px;
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Form inputs */
+input[type=text], input[type=password], input[type=date], textarea {
+    width: 100%;
+    
+    padding: 15px;
+    margin: 5px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type=text]:focus, input[type=password]:focus, input[type=date]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+/* Button styling */
+button.signupbtn {
+    animation: pulse 2s infinite;
+    background-color: #04AA6D;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+    border-radius: 4px;
+    font-weight: bold;
+}
+
+button.signupbtn:hover {
+    opacity: 1;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .clearfix .cancelbtn, .clearfix .signupbtn {
+        width: 100%;
+    }
+}
